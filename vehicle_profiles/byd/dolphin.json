@@ -1,0 +1,38 @@
+{
+    "car_model": "BYD: Dolphin",
+    "init": "ATAT1;ATST96;ATSH7E7;ATFCSH7E7;ATFCSD300000;ATFCSM1;",
+    "pids": [
+        {
+            "pid": "2200051",
+            "parameters": [
+                {
+                    "name": "SOC",
+                    "expression": "((B5*256)+B4)/100", ....need to fgure this part out Last four values in HEX -> SOC
+                    "unit": "%",
+                    "class": "battery",
+                    "min": "0",
+                    "max": "100"
+                }
+            ]
+        },
+        {
+            "pid": "22000B1",
+            "parameters": [
+                {
+                    "name": "Charger_connects",
+                    "expression": "[B4:B5]",    -> last for values HEX -> Decimal -46000
+                    "unit": "V",
+                    "class": "voltage",
+                    "min": "0",
+                    "max": "1000000" dont know
+                }
+            ]
+        },
+
+
+
+        
+            ]
+        }
+    ]
+}
